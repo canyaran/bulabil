@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bulabil</title>
+  <style>
+    body {margin:0;font-family:system-ui,Segoe UI,Arial,sans-serif}
+    .wrap{min-height:100vh;display:flex;flex-direction:column}
+    header,footer{padding:16px;background:#f2f2f2}
+    .container{flex:1;display:flex;gap:12px;padding:16px}
+    .sidebar{flex:0 0 220px;background:#fafafa;border:1px solid #eee;padding:12px}
+    .main{flex:1;border:1px solid #eee;padding:12px}
+    .cards{display:flex;gap:12px;flex-wrap:wrap}
+    .card{flex:1 1 200px;border:1px solid #ddd;padding:12px;border-radius:8px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header><strong>Bulabil.tr</strong>  Flexbox denemesi v5</header>
+    <div class="container">
+      <aside class="sidebar">Menü</aside>
+      <main class="main">
+        <div class="cards">
+          <div class="card">Kutu 1</div>
+          <div class="card">Kutu 2</div>
+          <div class="card">Kutu 3</div>
+        </div>
+      </main>
+    </div>
+    <footer> 2025 Bulabil</footer>
+  </div>
+  <script>console.log("Bulabil JS yüklendi");</script>
+</body>
+</html>
