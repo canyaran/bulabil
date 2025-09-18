@@ -1,35 +1,530 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Bulabil</title>
-  <style>
-    body {margin:0;font-family:system-ui,Segoe UI,Arial,sans-serif}
-    .wrap{min-height:100vh;display:flex;flex-direction:column}
-    header,footer{padding:16px;background:#f2f2f2}
-    .container{flex:1;display:flex;gap:12px;padding:16px}
-    .sidebar{flex:0 0 220px;background:#fafafa;border:1px solid #eee;padding:12px}
-    .main{flex:1;border:1px solid #eee;padding:12px}
-    .cards{display:flex;gap:12px;flex-wrap:wrap}
-    .card{flex:1 1 200px;border:1px solid #ddd;padding:12px;border-radius:8px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Etiketleri ve Kullanımları</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header><strong>Bulabil.tr</strong>  Flexbox denemesi v5</header>
-    <div class="container">
-      <aside class="sidebar">Menü</aside>
-      <main class="main">
-        <div class="cards">
-          <div class="card">Kutu 1</div>
-          <div class="card">Kutu 2</div>
-          <div class="card">Kutu 3</div>
-        </div>
-      </main>
-    </div>
-    <footer> 2025 Bulabil</footer>
-  </div>
-  <script>console.log("Bulabil JS yüklendi");</script>
+
+    <header>
+        <h1>HTML Etiketleri Rehberi</h1>
+        <p>HTML5 ve CSS3 standartlarına göre etiketlerin listesi ve Türkçe açıklamaları.</p>
+    </header>
+
+    <main>
+        <section class="tag-category">
+            <h2>Temel Etiketler</h2>
+            <div class="tag-list">
+                <article class="tag-card">
+                    <h3>1. &lt;!--...--&gt;</h3>
+                    <p>Bir yorumu tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>2. &lt;!DOCTYPE&gt;</h3>
+                    <p>Belge tipini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>3. &lt;a&gt;</h3>
+                    <p>Bir köprüyü (hyperlink) tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>4. &lt;abbr&gt;</h3>
+                    <p>Bir kısaltmayı veya akronimi tanımlar.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>5. &lt;acronym&gt;</h3>
+                    <p>HTML5'te desteklenmez. Bunun yerine &lt;abbr&gt; kullanın. Bir akronim tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>6. &lt;address&gt;</h3>
+                    <p>Bir belgenin yazarının/sahibinin iletişim bilgilerini tanımlar.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>7. &lt;applet&gt;</h3>
+                    <p>HTML5'te desteklenmez. Gömülü bir uygulamayı tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>8. &lt;area&gt;</h3>
+                    <p>Bir resim haritasının içindeki bir alanı tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>9. &lt;article&gt;</h3>
+                    <p>Bir makaleyi tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>10. &lt;aside&gt;</h3>
+                    <p>Sayfa içeriğinden ayrı bir içeriği tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>11. &lt;audio&gt;</h3>
+                    <p>Gömülü ses içeriğini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>12. &lt;b&gt;</h3>
+                    <p>Kalın metni tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>13. &lt;base&gt;</h3>
+                    <p>Belgedeki tüm göreceli URL'ler için temel URL'yi/hedefi belirtir.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>14. &lt;basefont&gt;</h3>
+                    <p>HTML5'te desteklenmez. Bunun yerine CSS kullanın. Varsayılan renk, boyut ve yazı tipini belirtir.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>15. &lt;bdi&gt;</h3>
+                    <p>Farklı yönde formatlanmış metnin bir kısmını izole eder.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>16. &lt;bdo&gt;</h3>
+                    <p>Geçerli metin yönünü geçersiz kılar.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>17. &lt;big&gt;</h3>
+                    <p>HTML5'te desteklenmez. Bunun yerine CSS kullanın. Büyük metni tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>18. &lt;blockquote&gt;</h3>
+                    <p>Başka bir kaynaktan alıntı yapılan bir bölümü tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>19. &lt;body&gt;</h3>
+                    <p>Belgenin gövdesini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>20. &lt;br&gt;</h3>
+                    <p>Tek bir satır sonunu tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>21. &lt;button&gt;</h3>
+                    <p>Tıklanabilir bir butonu tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>22. &lt;canvas&gt;</h3>
+                    <p>JavaScript ile dinamik grafikler çizmek için kullanılır.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>23. &lt;caption&gt;</h3>
+                    <p>Bir tablo başlığını tanımlar.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>24. &lt;center&gt;</h3>
+                    <p>HTML5'te desteklenmez. Bunun yerine CSS kullanın. Ortalanmış metni tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>25. &lt;cite&gt;</h3>
+                    <p>Bir eserin başlığını tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>26. &lt;code&gt;</h3>
+                    <p>Bir bilgisayar kodu parçasını tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>27. &lt;col&gt;</h3>
+                    <p>Bir &lt;colgroup&gt; elementi içindeki her sütun için sütun özelliklerini belirtir.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>28. &lt;colgroup&gt;</h3>
+                    <p>Bir tablodaki bir veya daha fazla sütun grubunu biçimlendirme için belirtir.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="tag-category">
+            <h2>Form ve Etkileşim Etiketleri</h2>
+            <div class="tag-list">
+                <article class="tag-card">
+                    <h3>29. &lt;data&gt;</h3>
+                    <p>Bir içeriğin makine tarafından okunabilir çevirisini ekler.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>30. &lt;datalist&gt;</h3>
+                    <p>Giriş kontrolleri için önceden tanımlanmış bir seçenek listesi belirtir.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>31. &lt;dd&gt;</h3>
+                    <p>Bir açıklama listesindeki bir terimin açıklamasını/değerini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>32. &lt;del&gt;</h3>
+                    <p>Bir belgeden silinmiş metni tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>33. &lt;details&gt;</h3>
+                    <p>Kullanıcının görüntüleyebileceği veya gizleyebileceği ek detayları tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>34. &lt;dfn&gt;</h3>
+                    <p>İçerik içinde tanımlanacak bir terimi belirtir.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>35. &lt;dialog&gt;</h3>
+                    <p>Bir diyalog kutusunu veya penceresini tanımlar.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>36. &lt;dir&gt;</h3>
+                    <p>HTML5'te desteklenmez. Bunun yerine &lt;ul&gt; kullanın. Bir dizin listesini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>37. &lt;div&gt;</h3>
+                    <p>Bir belgede bir bölümü tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>38. &lt;dl&gt;</h3>
+                    <p>Bir açıklama listesini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>39. &lt;dt&gt;</h3>
+                    <p>Bir açıklama listesindeki bir terimi/adı tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>40. &lt;em&gt;</h3>
+                    <p>Vurgulu metni tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>41. &lt;embed&gt;</h3>
+                    <p>Harici bir uygulama için bir kap tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>42. &lt;fieldset&gt;</h3>
+                    <p>Bir formdaki ilgili elementleri gruplandırır.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>43. &lt;figcaption&gt;</h3>
+                    <p>Bir &lt;figure&gt; elementi için bir başlığı tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>44. &lt;figure&gt;</h3>
+                    <p>Kendi başına durabilen içeriği belirtir.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>45. &lt;font&gt;</h3>
+                    <p>HTML5'te desteklenmez. Bunun yerine CSS kullanın. Metin için yazı tipi, renk ve boyutu tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>46. &lt;footer&gt;</h3>
+                    <p>Bir belge veya bölüm için bir altbilgi tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>47. &lt;form&gt;</h3>
+                    <p>Kullanıcı girdisi için bir HTML formu tanımlar.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>48. &lt;frame&gt;</h3>
+                    <p>HTML5'te desteklenmez. Bir frameset içinde bir pencereyi tanımlar.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>49. &lt;frameset&gt;</h3>
+                    <p>HTML5'te desteklenmez. Bir çerçeve setini tanımlar.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="tag-category">
+            <h2>Metin ve Medya Etiketleri</h2>
+            <div class="tag-list">
+                <article class="tag-card">
+                    <h3>50. &lt;h1&gt; to &lt;h6&gt;</h3>
+                    <p>HTML başlıklarını tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>51. &lt;head&gt;</h3>
+                    <p>Belge için meta verileri/bilgileri içerir.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>52. &lt;header&gt;</h3>
+                    <p>Bir belge veya bölüm için bir başlık tanımlar.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>53. &lt;hgroup&gt;</h3>
+                    <p>HTML5'te desteklenmez. Bir başlığı ve ilgili içeriği tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>54. &lt;hr&gt;</h3>
+                    <p>İçerikte tematik bir değişikliği tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>55. &lt;html&gt;</h3>
+                    <p>Bir HTML belgesinin kökünü tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>56. &lt;i&gt;</h3>
+                    <p>Alternatif bir ses veya ruh halindeki metnin bir kısmını tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>57. &lt;iframe&gt;</h3>
+                    <p>Satır içi bir çerçeveyi tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>58. &lt;img&gt;</h3>
+                    <p>Bir resmi tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>59. &lt;input&gt;</h3>
+                    <p>Bir giriş kontrolünü tanımlar.</p>
+                </article>
+                <article class="tag-card>
+                    <h3>60. &lt;ins&gt;</h3>
+                    <p>Bir belgeye eklenmiş metni tanımlar.</p>
+                </article>
+                <article class="tag-card>
+                    <h3>61. &lt;kbd&gt;</h3>
+                    <p>Klavye girdisini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>62. &lt;label&gt;</h3>
+                    <p>Bir &lt;input&gt; elementi için bir etiketi tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>63. &lt;legend&gt;</h3>
+                    <p>Bir &lt;fieldset&gt; elementi için bir başlık tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>64. &lt;li&gt;</h3>
+                    <p>Bir liste öğesini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>65. &lt;link&gt;</h3>
+                    <p>Bir belge ile harici bir kaynak arasındaki ilişkiyi tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>66. &lt;main&gt;</h3>
+                    <p>Bir belgenin ana içeriğini belirtir.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>67. &lt;map&gt;</h3>
+                    <p>Bir resim haritasını tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>68. &lt;mark&gt;</h3>
+                    <p>İşaretlenmiş/vurgulanmış metni tanımlar.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>69. &lt;menu&gt;</h3>
+                    <p>HTML5'te desteklenmez. Bir sırasız listeyi tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>70. &lt;meta&gt;</h3>
+                    <p>Bir HTML belgesi hakkında meta verileri tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>71. &lt;meter&gt;</h3>
+                    <p>Bilinen bir aralık içindeki bir skaler ölçümü temsil eder.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>72. &lt;nav&gt;</h3>
+                    <p>Navigasyon bağlantılarını tanımlar.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>73. &lt;noframes&gt;</h3>
+                    <p>HTML5'te desteklenmez. Çerçeveleri desteklemeyen kullanıcılar için alternatif içerik tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>74. &lt;noscript&gt;</h3>
+                    <p>İstemci tarafı komut dosyalarını desteklemeyen kullanıcılar için alternatif içerik tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>75. &lt;object&gt;</h3>
+                    <p>Harici bir uygulama için bir kap tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>76. &lt;ol&gt;</h3>
+                    <p>Sıralı bir listeyi tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>77. &lt;optgroup&gt;</h3>
+                    <p>Açılır listedeki ilgili seçenekleri gruplandırır.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>78. &lt;option&gt;</h3>
+                    <p>Açılır listedeki bir seçeneği tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>79. &lt;output&gt;</h3>
+                    <p>Bir hesaplamanın sonucunu tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>80. &lt;p&gt;</h3>
+                    <p>Bir paragrafı tanımlar.</p>
+                </article>
+                <article class=""tag-card">
+                    <h3>81. &lt;param&gt;</h3>
+                    <p>Bir nesne için bir parametre tanımlar.</p>
+                </article>
+                <article class=""tag-card">
+                    <h3>82. &lt;picture&gt;</h3>
+                    <p>Çoklu resim kaynağı için bir kap tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>83. &lt;pre&gt;</h3>
+                    <p>Önceden biçimlendirilmiş metni tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>84. &lt;progress&gt;</h3>
+                    <p>Bir görevin ilerlemesini temsil eder.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>85. &lt;q&gt;</h3>
+                    <p>Kısa bir alıntıyı tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>86. &lt;rp&gt;</h3>
+                    <p>Ruby ek açıklamalarını desteklemeyen tarayıcılarda ne gösterileceğini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>87. &lt;rt&gt;</h3>
+                    <p>Karakterlerin açıklamasını/telaffuzunu tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>88. &lt;ruby&gt;</h3>
+                    <p>Bir ruby ek açıklamasını tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>89. &lt;s&gt;</h3>
+                    <p>Artık doğru olmayan metni tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>90. &lt;samp&gt;</h3>
+                    <p>Bir bilgisayar programından örnek çıktıyı tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>91. &lt;script&gt;</h3>
+                    <p>İstemci tarafı bir komut dosyasını tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>92. &lt;search&gt;</h3>
+                    <p>Bir arama bölümünü tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>93. &lt;section&gt;</h3>
+                    <p>Bir belgede bir bölümü tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>94. &lt;select&gt;</h3>
+                    <p>Bir açılır listeyi tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>95. &lt;small&gt;</h3>
+                    <p>Daha küçük metni tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>96. &lt;source&gt;</h3>
+                    <p>Medya elementleri için birden fazla medya kaynağını tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>97. &lt;span&gt;</h3>
+                    <p>Bir belgede bir bölümü tanımlar.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>98. &lt;strike&gt;</h3>
+                    <p>HTML5'te desteklenmez. Bunun yerine &lt;del&gt; veya &lt;s&gt; kullanın. Üstü çizili metni tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>99. &lt;strong&gt;</h3>
+                    <p>Önemli metni tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>100. &lt;style&gt;</h3>
+                    <p>Bir belge için stil bilgilerini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>101. &lt;sub&gt;</h3>
+                    <p>Alt simge metnini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>102. &lt;summary&gt;</h3>
+                    <p>Bir &lt;details&gt; elementi için görünür bir başlığı tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>103. &lt;sup&gt;</h3>
+                    <p>Üst simge metnini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>104. &lt;svg&gt;</h3>
+                    <p>SVG grafikleri için bir kap tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>105. &lt;table&gt;</h3>
+                    <p>Bir tabloyu tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>106. &lt;tbody&gt;</h3>
+                    <p>Bir tablodaki gövde içeriğini gruplandırır.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>107. &lt;td&gt;</h3>
+                    <p>Bir tablodaki bir hücreyi tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>108. &lt;template&gt;</h3>
+                    <p>Sayfa yüklendiğinde gizlenmesi gereken içerik için bir kap tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>109. &lt;textarea&gt;</h3>
+                    <p>Çok satırlı bir giriş kontrolünü tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>110. &lt;tfoot&gt;</h3>
+                    <p>Bir tablodaki altbilgi içeriğini gruplandırır.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>111. &lt;th&gt;</h3>
+                    <p>Bir tablodaki bir başlık hücresini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>112. &lt;thead&gt;</h3>
+                    <p>Bir tablodaki başlık içeriğini gruplandırır.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>113. &lt;time&gt;</h3>
+                    <p>Belirli bir zamanı (veya tarih ve saati) tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>114. &lt;title&gt;</h3>
+                    <p>Belge için bir başlık tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>115. &lt;tr&gt;</h3>
+                    <p>Bir tablodaki bir satırı tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>116. &lt;track&gt;</h3>
+                    <p>Medya elementleri için metin izlerini tanımlar.</p>
+                </article>
+                <article class="tag-card deprecated">
+                    <h3>117. &lt;tt&gt;</h3>
+                    <p>HTML5'te desteklenmez. Bunun yerine CSS kullanın. Daktilo metnini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>118. &lt;u&gt;</h3>
+                    <p>Normal metinden farklı bir şekilde stillendirilmiş metni tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>119. &lt;ul&gt;</h3>
+                    <p>Sırasız bir listeyi tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>120. &lt;var&gt;</h3>
+                    <p>Bir değişkeni tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>121. &lt;video&gt;</h3>
+                    <p>Gömülü video içeriğini tanımlar.</p>
+                </article>
+                <article class="tag-card">
+                    <h3>122. &lt;wbr&gt;</h3>
+                    <p>Olası bir satır sonunu tanımlar.</p>
+                </article>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>Kodlama Desteği tarafından hazırlanan HTML Etiket Rehberi &copy; 2025</p>
+    </footer>
+
 </body>
 </html>

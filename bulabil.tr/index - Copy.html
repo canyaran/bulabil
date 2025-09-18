@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML5 Semantic OnePage</title>
+  <meta name="description" content="HTML5 semantik yapı: tarihçe, standartlar, etiketlerin amacı ve örnek şema." />
+  <style>
+    :root{
+      --bg:#f7f9fc;
+      --panel:#ffffff;
+      --soft:#eef2f7;
+      --text:#374151;          /* çok koyu değil */
+      --muted:#6b7280;
+      --primary:#2563eb;       /* yumuşak mavi */
+      --link:#1d4ed8;
+      --ring:#93c5fd;
+      --code-bg:#f3f4f6;
+      --border:#e5e7eb;
+    }
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      color:var(--text); background:var(--bg);
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1080px; margin:auto; padding:0 20px}
+    /* Skip link */
+    .skip{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip:focus{left:16px; top:16px; width:auto; height:auto; background:#fff; padding:.5rem .75rem; box-shadow:0 8px 24px rgba(0,0,0,.08); border-radius:10px}
+    /* Header */
+    header{
+      position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px);
+      background:rgba(247,249,252,.8); border-bottom:1px solid var(--border); z-index:10;
+    }
+    .brand{display:flex; align-items:center; gap:.6rem; padding:.9rem 0}
+    .logo{width:28px; height:28px; border-radius:7px; background:linear-gradient(135deg,var(--primary),#60a5fa)}
+    nav ul{display:flex; flex-wrap:wrap; gap:.75rem; list-style:none; margin:0; padding:.5rem 0 1rem}
+    nav a{display:inline-block; padding:.4rem .7rem; border-radius:8px}
+    nav a:focus, nav a:hover{outline:none; background:var(--soft)}
+    /* Hero */
+    .hero{
+      padding:48px 0 24px;
+    }
+    .hero h1{font-size:clamp(28px,4vw,44px); line-height:1.15; margin:.2rem 0}
+    .hero p{color:var(--muted); max-width:70ch}
+    .panel{
+      background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:20px;
+      box-shadow:0 10px 30px rgba(23,37,84,.06);
+    }
+    /* Grid */
+    .grid{display:grid; gap:20px}
+    @media (min-width:900px){ .grid-2{grid-template-columns:1.2fr .8fr} .grid-3{grid-template-columns:repeat(3,1fr)} }
+    /* Sections */
+    section{padding:28px 0}
+    section h2{font-size:clamp(20px,2.3vw,28px); margin:0 0 .6rem}
+    section p.lead{color:var(--muted)}
+    /* Code block */
+    pre{background:var(--code-bg); padding:14px; border-radius:12px; overflow:auto; border:1px solid var(--border)}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size:.95em}
+    /* Table */
+    table{width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--border); border-radius:12px; overflow:hidden}
+    th,td{padding:12px 14px; border-bottom:1px solid var(--border); vertical-align:top}
+    th{background:var(--soft); text-align:left}
+    tbody tr:hover{background:#f8fafc}
+    /* Timeline */
+    .timeline{position:relative; margin:0; padding-left:22px; list-style:none}
+    .timeline::before{content:""; position:absolute; left:8px; top:0; bottom:0; width:2px; background:var(--border)}
+    .timeline li{margin:0 0 16px; position:relative}
+    .timeline li::marker{content:""}
+    .timeline li::before{
+      content:""; position:absolute; left:-2px; top:.35rem; width:12px; height:12px; border-radius:50%;
+      background:var(--primary); box-shadow:0 0 0 3px #e0f2fe
+    }
+    /* Aside */
+    aside{background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:18px}
+    /* Footer */
+    footer{padding:28px 0 48px; color:var(--muted)}
+    /* Focus ring */
+    :focus-visible{outline:3px solid var(--ring); outline-offset:2px; border-radius:8px}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#icerik">İçeriğe atla</a>
+
+  <header aria-label="Üst Kısım">
+    <div class="container">
+      <div class="brand" role="img" aria-label="HTML5 Semantik">
+        <div class="logo" aria-hidden="true"></div>
+        <strong>HTML5 Semantic</strong>
+      </div>
+      <nav aria-label="Birincil">
+        <ul class="container" style="padding:0">
+          <li><a href="#giris">Giriş</a></li>
+          <li><a href="#sema">Şema</a></li>
+          <li><a href="#tarihce">Tarihçe</a></li>
+          <li><a href="#standart">Standartlar</a></li>
+          <li><a href="#etiketler">Etiketler</a></li>
+          <li><a href="#ipuclari">İpuçları</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="icerik" class="container" tabindex="-1">
+    <section id="giris" class="hero">
+      <div class="grid grid-2">
+        <div>
+          <h1>HTML5 semantik yapı, açık ve okunur bir web için.</h1>
+          <p class="lead">Anlamı öne çıkar. Erişilebilirliği yükseltir. Arama motorlarına netlik verir. Geliştiriciye sürdürülebilir bir iskelet sunar.</p>
+        </div>
+        <div class="panel" aria-label="Özet">
+          <p><strong>Lisan:</strong> HTML, bir işaretleme dili. Programlama dili değil.</p>
+          <p><strong>Mantık:</strong> İçeriği rolüne göre böl. <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> gibi etiketlerle anlamı belirt.</p>
+          <p><strong>Amaç:</strong> Yapı-sunum ayrımı, erişilebilirlik, SEO, bakım kolaylığı.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sema">
+      <h2>Sayfa Şeması</h2>
+      <p class="lead">Anlamsal bölümler tarayıcı ve yardımcı teknolojiler için işaretlerdir.</p>
+      <div class="panel">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="tr"&gt;
+  &lt;head&gt;...meta, başlık...&lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;logo, başlık, menü&lt;/header&gt;
+    &lt;nav&gt;ana gezinme bağlantıları&lt;/nav&gt;
+    &lt;main&gt;
+      &lt;article&gt;bağımsız içerik&lt;/article&gt;
+      &lt;section&gt;konusal bölüm&lt;/section&gt;
+      &lt;aside&gt;yan bilgiler&lt;/aside&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;alt bilgi&lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="tarihce">
+      <h2>Kronolojik Özet</h2>
+      <ul class="timeline" aria-label="Zaman Çizelgesi">
+        <li>
+          <h3 style="margin:.1rem 0">1991 — İlk HTML önerisi</h3>
+          <p class="lead">Tim Berners-Lee, CERN. Bağlantı ve temel etiketler.</p>
+        </li>
+        <li>
+          <h3 style="margin:.1rem 0">1994 — W3C kuruldu</h3>
+          <p class="lead">Web teknolojileri için açık standartlar geliştirme görevi.</p>
+        </li>
+        <li>
+          <h3 style="margin:.1rem 0">1995 — HTML 2.0</h3>
+          <p class="lead">Tarayıcılar arası farklılıkları sınırlama çabası.</p>
+        </li>
+        <li>
+          <h3 style="margin:.1rem 0">1999 — HTML 4.01</h3>
+          <p class="lead">Yapı ve sunum ayrımı. CSS’e ağırlık.</p>
+        </li>
+        <li>
+          <h3 style="margin:.1rem 0">2004 — WHATWG doğdu</h3>
+          <p class="lead">Operа, Mozilla, Apple mühendisleri. Uygulama odaklı HTML vizyonu.</p>
+        </li>
+        <li>
+          <h3 style="margin:.1rem 0">2008 — HTML5 taslak</h3>
+          <p class="lead">Semantik etiketler ve yeni API’ler şekillendi.</p>
+        </li>
+        <li>
+          <h3 style="margin:.1rem 0">2014 — W3C HTML5 Recommendation</h3>
+          <p class="lead">HTML5 resmen kabul edildi.</p>
+        </li>
+        <li>
+          <h3 style="margin:.1rem 0">2019+ — Living Standard</h3>
+          <p class="lead">WHATWG canlı standart. Sürekli güncellenir.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="standart">
+      <h2>Standartlaşma</h2>
+      <div class="grid grid-2">
+        <div class="panel">
+          <h3>W3C</h3>
+          <p>Öneriler ve testler. Tarayıcı üreticileri ile uyum.</p>
+          <h3>WHATWG</h3>
+          <p>HTML Living Standard. Tek kaynak, sürekli evrim.</p>
+        </div>
+        <aside aria-label="Notlar">
+          <h3 style="margin-top:0">Neden standart?</h3>
+          <p>Her yerde aynı davranış. Erişilebilirlik ve bakım maliyeti düşer.</p>
+          <p><strong>Uygulama:</strong> Tarayıcılar spesifikasyonu uygular. Geliştirici test eder.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="etiketler">
+      <h2>Temel Semantik Etiketler</h2>
+      <table aria-describedby="etiket-aciklama">
+        <thead>
+          <tr><th>Etiket</th><th>Amacı</th><th>Kullanım İpucu</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;header&gt;</code></td>
+            <td>Sayfa ya da bölüm üst içeriği</td>
+            <td>Bölüm içindeki başlıkla birlikte kullan</td>
+          </tr>
+          <tr>
+            <td><code>&lt;nav&gt;</code></td>
+            <td>Gezinme bağlantıları grubu</td>
+            <td>Birincil menüye ayır; alt menüler için ek <code>nav</code> kullanılabilir</td>
+          </tr>
+          <tr>
+            <td><code>&lt;main&gt;</code></td>
+            <td>Esas içerik</td>
+            <td>Belgede yalnızca bir tane</td>
+          </tr>
+          <tr>
+            <td><code>&lt;article&gt;</code></td>
+            <td>Bağımsız, taşınabilir içerik</td>
+            <td>Başlık içerir; tek başına anlamlı olmalı</td>
+          </tr>
+          <tr>
+            <td><code>&lt;section&gt;</code></td>
+            <td>Konusal bölüm</td>
+            <td>Anlamsal başlıkla (<code>h2-h6</code>) birlikte</td>
+          </tr>
+          <tr>
+            <td><code>&lt;aside&gt;</code></td>
+            <td>Yan, tamamlayıcı içerik</td>
+            <td>İlgili olduğu bölüme yakın konumlandır</td>
+          </tr>
+          <tr>
+            <td><code>&lt;footer&gt;</code></td>
+            <td>Alt bilgi ve kapanış bağlantıları</td>
+            <td>Belge düzeyinde ve bölüm düzeyinde kullanılabilir</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="ipuclari">
+      <h2>Uygulama İpuçları</h2>
+      <div class="grid grid-3">
+        <aside>
+          <h3 style="margin-top:0">Erişilebilirlik</h3>
+          <p>Başlık hiyerarşisine uy. <code>nav</code> için anlamlı bağlantı metinleri yaz.</p>
+        </aside>
+        <aside>
+          <h3 style="margin-top:0">Bakım</h3>
+          <p>Sunumu CSS’e taşı. Sınıf adlarında rol değil içerik kullan.</p>
+        </aside>
+        <aside>
+          <h3 style="margin-top:0">Performans</h3>
+          <p>Az ve öz DOM. Görsel ve fontları geç yükle.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>Kaynak gerçekliği: W3C ve WHATWG spesifikasyonları. Bu sayfa semantik örnek olarak tasarlandı.</p>
+  </footer>
+</body>
+</html>

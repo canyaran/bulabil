@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Semantik HTML örneği</title>
+  <style>
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,Arial}
+    .wrap{display:grid;gap:8px;
+      grid-template-areas:
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer";
+      grid-template-columns: 2fr 1fr; padding:12px}
+    header,nav,main,aside,footer{padding:12px;border:1px solid #ddd;border-radius:8px}
+    header{grid-area:header;background:#f6f6f6}
+    nav{grid-area:nav}
+    main{grid-area:main}
+    aside{grid-area:aside;background:#fafafa}
+    footer{grid-area:footer;background:#f6f6f6}
+    figure{margin:0} img{max-width:100%;height:auto;display:block}
+    nav a{margin-right:12px}
+    label{display:block;margin:8px 0 4px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- header: sayfanın üst kısmı, logo ve başlık -->
+    <header>
+      <h1>Bulabil</h1>
+      <p>Semantik HTML demoyu inceliyorsun.</p>
+    </header>
+
+    <!-- nav: site menüsü -->
+    <nav aria-label="Ana menü">
+      <a href="#yazi">Yazı</a>
+      <a href="#yazi">Yazı</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+
+    <!-- main: ana içerik alanı -->
+    <main id="yazi">
+      <!-- article: tek bir yazı -->
+      <article>
+        <h2>Güneş Sistemi</h2>
+
+        <!-- section: yazı içi alt bölüm -->
+        <section>
+          <h3>Gezegenler</h3>
+          <p>Merkür, Venüs, Dünya, Mars, Jüpiter, Satürn, Uranüs, Neptün.</p>
+        </section>
+
+        <!-- figure + figcaption: görsel ve açıklaması -->
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg" alt="Güneş ve gezegenler sıralı görseli">
+          <figcaption>Şema: Güneş ve gezegenler.</figcaption>
+        </figure>
+      </article>
+
+      <!-- form: kullanıcıdan bilgi alma -->
+      <section id="iletisim" aria-labelledby="iletisim-baslik">
+        <h2 id="iletisim-baslik">Bülten Kaydı</h2>
+        <form>
+          <label for="ad">Ad</label>
+          <input id="ad" name="ad" type="text" required />
+          <label for="eposta">E-posta</label>
+          <input id="eposta" name="eposta" type="email" required />
+          <button type="submit">Kaydol</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- aside: kenar bilgi -->
+    <aside>
+      <h2>Günün notu</h2>
+      <p>Yerçekimi her şeyi merkeze çeker.</p>
+    </aside>
+
+    <!-- footer: alt bilgi -->
+    <footer>
+      <small>© 2025 Bulabil</small>
+    </footer>
+  </div>
+</body>
+</html>
